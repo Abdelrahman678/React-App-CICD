@@ -66,4 +66,4 @@ jobs:
         env:
           RAILWAY_TOKEN: a525ba23-d6c2-4171-9cde-30c1f6c4d141
         run: |
-          railway up --environment staging --service mohamed
+          railway up --environment staging --service mohamed --detach  --project 2a2efb88-868e-49b8-b5e9-9fe6eb9da080
