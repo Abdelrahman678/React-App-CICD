@@ -1,4 +1,4 @@
-name: Cache Node.js dependencies
+name: CI Using Template
 
 on:
 #   push:
