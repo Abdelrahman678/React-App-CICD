@@ -1,4 +1,4 @@
-name: EC2-CICD
+name: SelfHosted Runner
 
 on:
   workflow_dispatch:
