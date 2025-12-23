@@ -1,6 +1,6 @@
 import React from "react";
 import Hello from "./components/Hello";
-const AWS_KEY = "AKIAIOSFODNN7EXAMPLE";
+const AWS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
 export default function App() {
   return (<div className="app"><h1>React Static Site</h1><Hello name="railway" /></div>);
 }
