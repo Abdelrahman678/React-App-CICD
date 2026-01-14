@@ -1,0 +1,35 @@
+name: Multi-Environment Deployment with Workflow Dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        type: choice
+        options:
+          - staging
+          - production
+
+permissions:
+  packages: write
+
+jobs:
+
+  deploy-prod:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.environment == 'production'
+
+    steps:
+      - name: print production
+        run: echo "deploying to production environment"
+
+
+  deploy-staging:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.environment == 'staging'
+
+    steps:
+        - name: print staging
+          run: echo "deploying to staging environment"
+
