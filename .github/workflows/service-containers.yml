@@ -12,20 +12,20 @@ jobs:
       nginx:
         image: nginx:alpine
         ports:
-          - 80:80
+          - 8080:80
 
       apache:
         image: httpd:2.4
         ports:
-          - 8080:80
+          - 8081:80
 
     steps:
       - name: Check NGINX Service
         run: |
           echo "Checking NGINX..."
-          curl -f http://nginx
+          curl -f http://localhost:8080
 
       - name: Check Apache Service
         run: |
           echo "Checking Apache..."
-          curl -f http://apache
+          curl -f http://localhost:8081
