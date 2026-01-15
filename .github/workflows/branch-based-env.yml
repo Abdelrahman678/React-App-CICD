@@ -1,0 +1,19 @@
+name: Environment Feature with Variables
+
+on:
+  push:
+    branches:
+        - staging
+        - production
+
+jobs:
+  deploy:
+    name: Deploy to ${{ github.ref_name }}
+    runs-on: ubuntu-latest
+
+    environment:
+      name: ${{ github.ref_name }}
+
+    steps:
+      - name: Print environment text
+        run: echo "${{github.ref_name}}"
