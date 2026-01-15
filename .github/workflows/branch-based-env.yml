@@ -16,4 +16,4 @@ jobs:
 
     steps:
       - name: Print environment text
-        run: echo "${{github.ref_name}}"
+        run: echo "${{vars.ENVIRONMENT_TEXT}}}"
